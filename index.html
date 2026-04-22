@@ -1,96 +1,165 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Painel da Empresa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel Interno</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Arial, sans-serif;
-  color: white;
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      background: url('https://images.unsplash.com/photo-1497366216548-37526070297c') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+    }
 
-  /* Fundo moderno */
-  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95)),
-              url("https://images.unsplash.com/photo-1557683316-973673baf926");
-  background-size: cover;
-  background-position: center;
-}
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(10, 20, 40, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 0;
+    }
 
-/* Título */
-h1 {
-  text-align: center;
-  padding: 25px;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
+    .container {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      max-width: 1200px;
+      width: 90%;
+    }
 
-/* Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-  gap: 20px;
-  padding: 30px;
-}
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
 
-/* Cards estilo glass */
-.card {
-  backdrop-filter: blur(10px);
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  padding: 25px;
-  text-align: center;
-  text-decoration: none;
-  color: white;
-  transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.1);
-}
+    p {
+      margin-bottom: 30px;
+      opacity: 0.8;
+    }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: rgba(255,255,255,0.1);
-}
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
 
-/* Ícones */
-.card img {
-  width: 55px;
-  height: 55px;
-  margin-bottom: 10px;
-}
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 30px 20px;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
 
-/* Texto */
-.card span {
-  display: block;
-  font-size: 15px;
-  font-weight: 500;
-}
+    .card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,0.1);
+    }
 
-</style>
+    .card img {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
 </head>
-
 <body>
 
-<h1>Painel de Sistemas</h1>
+<div class="overlay"></div>
 
-<div class="grid">
+<div class="container">
+  <h1>Bem-vindo!</h1>
+  <p>Acesse rapidamente os sistemas da empresa</p>
 
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/906/906324.png"><span>IXC</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"><span>OPA</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png"><span>Chatmix</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"><span>Tutoriais</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"><span>Presets</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"><span>Grafana</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png"><span>Provcam</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png"><span>Prov Conecta</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/854/854878.png"><span>Posteamento Copel</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/565/565547.png"><span>Bitdefender</span></a>
+  <div class="grid">
 
-<!-- Novos -->
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968895.png"><span>Trello</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/565/565547.png"><span>RustDesk</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111615.png"><span>Slack</span></a>
-<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png"><span>Perfis de Autorização</span></a>
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968705.png">
+      <div>IXC</div>
+    </a>
 
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png">
+      <div>OPA</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+      <div>Chatmix</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png">
+      <div>Tutoriais</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png">
+      <div>Presets</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968350.png">
+      <div>Grafana</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/2920/2920277.png">
+      <div>Provcam</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png">
+      <div>Prov Conecta</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+      <div>Copel</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968899.png">
+      <div>Bitdefender</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/5968/5968654.png">
+      <div>Trello</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
+      <div>RustDesk</div>
+    </a>
+
+    <a class="card" href="#">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111615.png">
+      <div>Slack</div>
+    </a>
+
+  </div>
+
+  <div class="footer">
+    Segurança • Produtividade • Conectividade
+  </div>
 </div>
 
 </body>
