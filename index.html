@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Painel da Empresa</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: white;
+
+  /* Fundo moderno */
+  background: linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.95)),
+              url("https://images.unsplash.com/photo-1557683316-973673baf926");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  padding: 25px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Cards estilo glass */
+.card {
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  padding: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.1);
+}
+
+/* Ícones */
+.card img {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 10px;
+}
+
+/* Texto */
+.card span {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Painel de Sistemas</h1>
+
+<div class="grid">
+
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/906/906324.png"><span>IXC</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png"><span>OPA</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png"><span>Chatmix</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/2991/2991148.png"><span>Tutoriais</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"><span>Presets</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png"><span>Grafana</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/1048/1048953.png"><span>Provcam</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png"><span>Prov Conecta</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/854/854878.png"><span>Posteamento Copel</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/565/565547.png"><span>Bitdefender</span></a>
+
+<!-- Novos -->
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/5968/5968895.png"><span>Trello</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/565/565547.png"><span>RustDesk</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111615.png"><span>Slack</span></a>
+<a class="card" href="#"><img src="https://cdn-icons-png.flaticon.com/512/847/847969.png"><span>Perfis de Autorização</span></a>
+
+</div>
+
+</body>
+</html>
